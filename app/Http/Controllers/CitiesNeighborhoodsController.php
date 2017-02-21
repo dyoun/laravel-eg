@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\City;
-use App\Models\Neighborhoods;
+use App\Models\Neighborhood;
+use Illuminate\Http\Request;
 
 class CitiesNeighborhoodsController extends Controller
 {
@@ -58,7 +56,7 @@ class CitiesNeighborhoodsController extends Controller
 
         return json_encode([
             'status' => 'created',
-            'data' => $city->toArray(),
+            'data'   => $city->toArray(),
         ]);
     }
 }
