@@ -10,8 +10,7 @@ Routes
 
 Controllers
 
-- app/Http/Controllers/CitiesController.php
-- app/Http/Controllers/NeighborhoodsController.php
+- app/Http/Controllers/CitiesNeighborhoodsController.php
 
 Models
 
@@ -34,7 +33,7 @@ DB002_PASS=<db pass2>
     $ mysql -u <user> -p<pass> -e 'create database st_cities; create database st_neighborhoods;'
     $ mysql -u <user> -p<pass> st_cities < st_cities.cities.sql
     $ mysql -u <user> -p<pass> st_neighborhoods < st_neighborhoods.neighborhoods.sql
-    $ php artisan up
+    $ php artisan serve
 
 ## Endpoints
 - http://localhost:8000/

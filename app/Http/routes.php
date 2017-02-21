@@ -17,13 +17,25 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => ['web']], function () {
 
     // cities
-    Route::get('/', 'CitiesController@index');
-    Route::resource('cities', 'CitiesController');
+    Route::get(
+    	'/',
+    	'CitiesNeighborhoodsController@indexCity'
+    );
+    Route::resource(
+    	'cities',
+    	'CitiesNeighborhoodsController@indexCity'
+    );
 
     // neighborhoods
-    Route::resource('neighborhoods', 'NeighborhoodsController@index');
+    Route::resource(
+    	'neighborhoods',
+    	'CitiesNeighborhoodsController@indexNeighborhood'
+    );
 
     // neighborhoods filtered by a city
-    Route::resource('cities/{id}/neighborhoods', 'NeighborhoodsController@indexByCity');
+    Route::resource(
+    	'cities/{id}/neighborhoods',
+    	'CitiesNeighborhoodsController@indexByCity'
+    );
 
 });
