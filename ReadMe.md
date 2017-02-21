@@ -1,15 +1,33 @@
 # Quickstart
+Simple example RESTful API shamelessly modified off of the [Laravel Task List Exmaple](https://laravel.com/docs/5.2/quickstart). City and Neighborhood models use different DBs, ie, City is located in `st_cities.cities` and Neighborhood is located in `st_neighborhoods.neighborhoods`.
+
+## Overview
+Relevant files are:
+
+Routes
+
+- app/Http/routes.php
+
+Controllers
+
+- app/Http/Controllers/CitiesController.php
+- app/Http/Controllers/NeighborhoodsController.php
+
+Models
+
+- app/Models/City.php
+- app/Models/Neighborhood.php
 
 ## Environment Settings
 ```
-export DB001_HOST=127.0.0.1 \
+$ export DB001_HOST=<db hostname1> \
 DB001_DB=st_cities \
-DB001_USER=root \
-DB001_PASS=root \
-DB002_HOST=127.0.0.1 \
+DB001_USER=<db user1> \
+DB001_PASS=<db pass1> \
+DB002_HOST=<db hostname2> \
 DB002_DB=st_neighborhoods \
-DB002_USER=root \
-DB002_PASS=root
+DB002_USER=<db user2> \
+DB002_PASS=<db pass2>
 ```
 
 ## Setup & Start App
