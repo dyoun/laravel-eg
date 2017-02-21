@@ -17,6 +17,9 @@ Models
 - app/Models/City.php
 - app/Models/Neighborhood.php
 
+DB Settings
+- config/database.php
+
 ## Environment Settings
 ```
 $ export DB001_HOST=<db hostname1> \
